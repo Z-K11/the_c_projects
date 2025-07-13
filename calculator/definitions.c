@@ -14,7 +14,7 @@ float input_func(void)
 {
     printf("Input : ");
     float x;
-    scanf("%e",&x);
+    scanf("%f",&x);
     return x;
 
 }
@@ -27,20 +27,20 @@ void processor(void)
     {
     case  1:
         ans = addition_func(input_func(),input_func());
-        printf("The answer is %e",ans);
+        printf("The answer is %f",ans);
         break;
     
     case  2:
         ans = subtraction_func(input_func(),input_func());
-        printf("The answer is %e",ans);
+        printf("The answer is %f",ans);
         break;
     case  3:
         ans = division_func(input_func(),input_func());
-        printf("The answer is %e",ans);
+        printf("The answer is %f",ans);
         break;
     case  4:
         ans = multiplication_func(input_func(),input_func());
-        printf("The answer is %e",ans);
+        printf("The answer is %f",ans);
         break;
     default:
         printf("Invalid Input exiting the programe\n");
