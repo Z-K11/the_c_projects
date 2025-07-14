@@ -18,32 +18,28 @@ float input_func(void)
     return x;
 
 }
-void processor(void)
+void processor(int choice)
 {
     float ans;
-    float temp = input_func();
-    int choice = (int)temp;
+        printf("Inputs follow the same order in calculation as input for example input1+input2 for addition\n");
+
     switch (choice)
     {
     case  1:
-        ans = addition_func(input_func(),input_func());
-        printf("The answer is %f",ans);
+        colorchanger(addition_func(input_func(),input_func()));
         break;
     
     case  2:
-        ans = subtraction_func(input_func(),input_func());
-        printf("The answer is %f",ans);
+        colorchanger(subtraction_func(input_func(),input_func()));
         break;
     case  3:
-        ans = division_func(input_func(),input_func());
-        printf("The answer is %f",ans);
+        colorchanger(division_func(input_func(),input_func()));
         break;
     case  4:
-        ans = multiplication_func(input_func(),input_func());
-        printf("The answer is %f",ans);
+        colorchanger(multiplication_func(input_func(),input_func()));
         break;
     default:
-        printf("Invalid Input exiting the programe\n");
+        printf("Invalid Input exiting the program\n");
         break;
     }
     return;
@@ -63,12 +59,20 @@ float multiplication_func(float a,float b)
 }
 float division_func(float a,float b)
 {
-    if(b!=0)
-    printf("The remainder is %d",(int)a%(int)b);
-    else
+    if(b==0.0f)
     {
         printf("Error cannot divide by 0 Exiting\n");
         return 0;
     }
+    else
+    {
+        
+        printf("The remainder is %d",(int)a%(int)b);
+    }
     return a/b;
+}
+void colorchanger(float ans)
+{
+    printf("\033[0;34mThe answer is %.2f \033[0m\n",ans);
+    return;
 }
