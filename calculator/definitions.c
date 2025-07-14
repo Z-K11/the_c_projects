@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 #include "header.h"
 
 void display_menu(void)
@@ -57,12 +58,12 @@ float multiplication_func(float a,float b)
 {
     return a*b;
 }
-float division_func(float a,float b)
+float division_func(float b,float a)
 {
-    if(b==0.0f)
+    if(b==0)
     {
-        printf("Error cannot divide by 0 Exiting\n");
-        return 0;
+        printf("Error cannot divide by 0\n");
+        return NAN;
     }
     else
     {
@@ -73,6 +74,13 @@ float division_func(float a,float b)
 }
 void colorchanger(float ans)
 {
-    printf("\033[0;34mThe answer is %.2f \033[0m\n",ans);
-    return;
+    if(isnan(ans))
+    {
+        return;
+    }
+    else
+    {
+        printf("\033[0;34mThe answer is %.2f \033[0m\n",ans);
+        return;
+    }
 }
