@@ -1,4 +1,5 @@
 calculator/calculator
 test.c
 test
-pacman_Game/pacman.c
+pacman_Game/pacman
+pacman_Game/roadmap.txt
