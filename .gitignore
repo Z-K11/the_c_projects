@@ -1,5 +1,12 @@
+# Executibles
 calculator/calculator
-test.c
-test
 pacman_Game/pacman
+# Object files 
+*.o
+# Temp Files
+*~
+*.swp
+# Dependency files
+*.d
+# Miscellaneous files
 pacman_Game/roadmap.txt
