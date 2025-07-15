@@ -26,13 +26,13 @@ char* color []=
     "\033[0;34m", //blue
     "\033[0;35m", //magenta
     "\033[0;36m", //cyan
-    "\033[0;37m", //white
+    //"\033[0;37m", white
     
 };
 size_t color_size = sizeof(color)/sizeof(color[0]);
 char * res = "\033[0m"; //reset
 char * black = "\033[0;30m"; //black
-char* message = "Welcome to Pacman by ZK11\nSingle Player\nMultiplayer\nHighscores\nCredits\nExit";
+char* message = "Welcome to Pacman by ZK11\nSingle Player\nMultiplayer\nHighscores\nCredits\nExit\n";
     display_menu(color,color_size,message);
     printf("%s",res);
     return 0;
