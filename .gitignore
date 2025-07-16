@@ -1,6 +1,7 @@
 # Executibles
 calculator/calculator
 pacman_Game/pacman
+pacman_Game/test
 # Object files 
 *.o
 # Temp Files
@@ -10,3 +11,5 @@ pacman_Game/pacman
 *.d
 # Miscellaneous files
 pacman_Game/roadmap.txt
+#Test files
+pacman_Game/test.c

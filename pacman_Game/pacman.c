@@ -17,8 +17,8 @@ int main(void)
     white,
     reset
 };
-char* color []=
-{
+    char* color []=
+{   
     
     "\033[0;31m", //red
     "\033[0;32m", //green
@@ -29,11 +29,22 @@ char* color []=
     //"\033[0;37m", white
     
 };
-size_t color_size = sizeof(color)/sizeof(color[0]);
-char * res = "\033[0m"; //reset
-char * black = "\033[0;30m"; //black
-char* message = "Welcome to Pacman by ZK11\nSingle Player\nMultiplayer\nHighscores\nCredits\nExit\n";
-    display_menu(color,color_size,message);
-    printf("%s",res);
+//size of colors array
+    size_t color_size = sizeof(color)/sizeof(color[0]);
+    //color code for resetting color back to default
+    char * res = "\033[0m"; //reset
+    char * black = "\033[0;30m"; //black
+    char* message = "Welcome to Pacman by ZK11\nSingle Player\nMultiplayer\nHighscores\nCredits\nExit\n";
+    int a;
+    do
+    {
+        display_menu(color,color_size,message);
+        printf("%s",res);
+        printf("Please provide an input between 0-9\n");
+        a = input_num();
+        printf("the input for now is %d",a);
+
+    } while (a>0 & a<=5);
+    
     return 0;
 }

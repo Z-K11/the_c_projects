@@ -22,3 +22,6 @@ utils.o: utils.c utils.h
 
 clean:
 	rm -f *.o
+
+destroy:
+	rm -f *.o pacman

@@ -8,4 +8,5 @@ void display_menu(char* color[],size_t color_size,char *string)
         printf("%s%c",
             color[(i+1)%color_size],string[i]);
     }
+    return;
 }
