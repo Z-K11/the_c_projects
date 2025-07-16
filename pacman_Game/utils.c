@@ -3,7 +3,7 @@
 int input_num(void)
 {
     
-    int x;
+    short int x;
     scanf("%d",&x);
     return x;
 

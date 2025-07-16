@@ -35,7 +35,7 @@ int main(void)
     char * res = "\033[0m"; //reset
     char * black = "\033[0;30m"; //black
     char* message = "Welcome to Pacman by ZK11\n1. Single Player\n2. Multiplayer\n3. Highscores\n4. Credits\n5. Exit\n";
-    int a;
+    short int a;
     do
     {
         display_menu(color,color_size,message);
