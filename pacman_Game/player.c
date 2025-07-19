@@ -20,7 +20,7 @@ void set_player_name(struct player* p)
         p->name[str_length++]=ch;
     }
     p->name[str_length]='\0';
-    printf("Player name = %s\n",p->name);
+    printf("Player %d name = %s\n",player_count,p->name);
     return;
     
 }
