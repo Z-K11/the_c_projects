@@ -8,7 +8,7 @@ void set_player_name(struct player* p)
     p->name = malloc(1);
     int ch;
     int str_length=0;
-    while ((ch=getchar())!='\n'&& ch != EOF)
+    while ((ch=getchar())!='\n'&& ch != EOF&&str_length<15)
     {
         char * temp = realloc(p->name,str_length+2);
         if (temp==NULL)
