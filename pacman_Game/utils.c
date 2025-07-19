@@ -8,3 +8,9 @@ int input_num(void)
     return x;
 
 }
+void clear_input_buffer(void)
+{
+    int buffer;
+    while((buffer=getchar())!='\n'&&buffer!=EOF);
+    return;
+}
