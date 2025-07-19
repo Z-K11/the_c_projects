@@ -34,7 +34,7 @@ int main(void)
     //color code for resetting color back to default
     char * res = "\033[0m"; //reset
     char * black = "\033[0;30m"; //black
-    char* message = "Welcome to Pacman by ZK11\n1. Single Player\n2. Multiplayer\n3. Highscores\n4. Credits\n5. Exit\n";
+    /* char* message = "Welcome to Pacman by ZK11\n1. Single Player\n2. Multiplayer\n3. Highscores\n4. Credits\n5. Exit\n\a";
     short int a;
     do
     {
@@ -44,7 +44,9 @@ int main(void)
         a = input_num();
         printf("the input for now is %d",a);
 
-    } while (a>0 & a<=5);
+    } while (a>0 & a<5); */
+    struct player p1;
+    p1.score = 0;
     
     return 0;
 }

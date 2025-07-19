@@ -4,7 +4,7 @@ int input_num(void)
 {
     
     short int x;
-    scanf("%d",&x);
+    scanf("%hd",&x);
     return x;
 
 }
