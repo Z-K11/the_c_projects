@@ -4,6 +4,7 @@
 #include"score.h"
 #include"utils.h"
 #include<stdio.h>
+#include<stdlib.h>
 int main(void)
 {
     enum color
@@ -45,8 +46,8 @@ int main(void)
         printf("the input for now is %d",a);
 
     } while (a>0 & a<5); */
-    struct player p1;
-    p1.score = 0;
-    
+    struct player* p1=malloc(sizeof(struct player));
+    p1->score = 0;
+    set_player_name(p1);
     return 0;
 }
