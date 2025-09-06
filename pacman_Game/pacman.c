@@ -54,7 +54,7 @@ int main(void)
                 p[0]=malloc(sizeof(struct player));
                 p[0]->score = 0;
                 set_player_name(p[0]);
-
+                draw_map(52);
                 free(p[0]);
                 p[0]=NULL;
                 return 0;
