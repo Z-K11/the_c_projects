@@ -5,7 +5,7 @@ void set_player_name(struct player* p)
 {
     player_count++;
     printf("Please Input name for player %d\n",player_count);
-    p->name = malloc(1);
+    p->name = NULL;
     int ch;
     int str_length=0;
     while ((ch=getchar())!='\n'&& ch != EOF&&str_length<15)
@@ -23,4 +23,9 @@ void set_player_name(struct player* p)
     printf("Player %d name = %s\n",player_count,p->name);
     return;
     
+}
+void get_scroe(struct player* p,double* x)
+{
+    *x=p->score;
+    return;
 }

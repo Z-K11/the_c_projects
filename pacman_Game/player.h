@@ -9,6 +9,7 @@ struct player
 };
 static int player_count;
 void set_player_name(struct player* p);
+void get_score(struct player* p,double *x);
 
 
 

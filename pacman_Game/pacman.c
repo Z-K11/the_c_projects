@@ -38,6 +38,7 @@ int main(void)
     char* message = "Welcome to Pacman by ZK11\n1. Single Player\n2. Multiplayer\n3. Highscores\n4. Credits\n5. Exit\n\a";
     short int a;
     struct player* p[2];
+    double* score =NULL;
 
     do
     {
@@ -53,6 +54,7 @@ int main(void)
                 p[0]=malloc(sizeof(struct player));
                 p[0]->score = 0;
                 set_player_name(p[0]);
+
                 free(p[0]);
                 p[0]=NULL;
                 return 0;
