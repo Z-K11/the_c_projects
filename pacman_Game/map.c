@@ -1,25 +1,26 @@
 #include<stdio.h>
 #include"map.h"
-void draw_map(const int size)
+void draw_map(const int size,char **map_array)
 {
+    size_t j;
     for (size_t i=1;i<size;i++)
     {
-        for (size_t j=1;j<size*2;j++)
+        for (j=1;j<size*2;j++)
         {
             if (i==1|i==size-1)
             {
-                printf("_");
+                map_array[i][j]="_";
             }
             else if(j==1|j==(size*2)-1)
             {
-                printf("|");
+                map_array[i][j]="|";
             }
             else
             {
-                printf(" ");
+                map_array[i][j]=" ";
             }
         }
-        printf("\n");
+        map_array[i][j]="\n";
         
     }
 }
