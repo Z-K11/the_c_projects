@@ -5,9 +5,8 @@
 #include"utils.h"
 #include<stdio.h>
 #include<stdlib.h>
-char* map_ptr;
 char map_array[100][100];
-map_ptr=&map_array;
+
 int main(void)
 {
     enum color
@@ -57,7 +56,7 @@ int main(void)
                 p[0]=malloc(sizeof(struct player));
                 p[0]->score = 0;
                 set_player_name(p[0]);
-                draw_map(55);
+                draw_map(20,map_array);
                 free(p[0]);
                 p[0]=NULL;
                 return 0;
